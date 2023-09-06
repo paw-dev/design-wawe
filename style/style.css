@@ -3,7 +3,6 @@
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 0px;
     margin: 0px;
@@ -16,7 +15,7 @@ body {
 }
 
 .section-header {
-    background-image: url("img/Rectangle\ 75.jpeg");
+    background-image: url("/img/img-header.jpeg");
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -51,8 +50,52 @@ h1 {
     margin-bottom: -20px;
 }
 
-p {
+.description-header {
     font-size: 24px;
     letter-spacing: 0.6px;
     text-align: center;
+    padding-bottom: 315px;
+}
+
+.group {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 90px;
+}
+
+.about {
+    padding-bottom: 185px;
+}
+
+h2 {
+    margin: 190px 0 100px 60px;
+    color: #01353E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.text-about {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 450px;
+}
+
+.text-about p {
+    width: 480px;
+    color: #242121;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    margin-right: 115px;
+}
+
+.element {
+    position: relative;
+    top: 27px;
+    right: 13px;
 }
