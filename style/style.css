@@ -1,3 +1,9 @@
+:root {
+    --color-h2: #01353E;
+    --secondary-font: 'Raleway',
+        sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -69,13 +75,18 @@ h1 {
 }
 
 h2 {
-    margin: 190px 0 100px 60px;
-    color: #01353E;
-    font-family: 'Raleway', sans-serif;
+    color: var(--color-h2);
+    font-family: var(--secondary-font);
     font-size: 48px;
     font-weight: 600;
     letter-spacing: 0.6px;
     text-transform: uppercase;
+}
+
+
+#about-us {
+    margin: 190px 0 100px 60px;
+    text-align: start;
 }
 
 .text-about {
@@ -98,4 +109,13 @@ h2 {
     position: relative;
     top: 27px;
     right: 13px;
+}
+
+#services {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.advantages {
+    display: flex;
 }
