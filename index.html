@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAWE</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+    <link rel="stylesheet" href="style/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,11 +25,11 @@
                     </a>
                     <div class="menu">
                         <a href="#about-us">Про нас</a>
-                        <a href="#">Послуги</a>
-                        <a href="#">Вартість</a>
-                        <a href="#">Блог</a>
-                        <a href="#">Команда</a>
-                        <a href="#">Контакти</a>
+                        <a href="#services">Послуги</a>
+                        <a href="#packet-services">Вартість</a>
+                        <a href="#blog">Блог</a>
+                        <a href="#our-team">Команда</a>
+                        <a href="#contacts">Контакти</a>
                     </div>
                 </nav>
                 <h1>WAWE</h1>
@@ -39,8 +41,8 @@
     </header>
     <main>
         <div class="container">
-            <section class="about">
-                <h2 id="about-us">Про школу, про серфінг, про канари
+            <section class="about" id="about-us">
+                <h2>Про школу, про серфінг, про канари
                     <img src="img/element.png" alt="" class="element">
                 </h2>
 
@@ -83,9 +85,11 @@
                 </div>
             </section>
         </div>
-        <section class="services">
+
+        <!-- Section 'У ШКОЛІ ВИ ОТРИМАЄТЕ' -->
+        <section class="services" id="services">
             <div class="container">
-                <h2 id="services">У школі ви отримаєте
+                <h2>У школі ви отримаєте
                     <img src="img/element.png" alt="" class="element">
                 </h2>
                 <div class="advantages">
@@ -116,10 +120,382 @@
                             визначення рівня катання</p>
                     </div>
                 </div>
+                <div class="statistic">
+                    <div class="statistic-numbers">
+                        <div class="wave">
+                            <img src="./img/wave-1.svg" alt="Приїхали вдруге">
+                            <span>85%</span>
+                            <p>Приїхали вдруге</p>
+                        </div>
+                        <div class="wave">
+                            <img src="./img/wave-2.svg" alt="Навчилися кататися">
+                            <span>95%</span>
+                            <p>Навчилися кататися</p>
+                        </div>
+                        <div class="wave">
+                            <img src="./img/wave-3.svg" alt="Задоволених клієнтів">
+                            <span>99%</span>
+                            <p>Задоволених клієнтів</p>
+                        </div>
+                    </div>
+                    <div class="statistic-text">
+                        <p>Великою перевагою нашої школи є власна методика навчання. Ми розробили власний стиль навчання
+                            серфінгу, що дозволяє новачкам максимально швидко стати на дошку.</p>
+                        <p>Саме наша методика та наші викладачі дозволили нам пройти атестацію Федерації серфінгу
+                            Канарських островів – FEDERACIÓN CANARIA DE SURF. Це означає, що наша школа відповідає усім
+                            світовим стандартам. Переатестація проводиться щорічно і це дозволяє нам завжди прагнути
+                            покращення навчання.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 'Покоряй вершини' -->
+        <section class="our_teachers">
+            <div class="container">
+                <div class="our_teachers-text-block">
+                    <h2>Покоряй вершини
+                        <img src="img/element.png" alt="" class="element">
+                    </h2>
+                    <p>Викладачі нашої школи серфінгу серед кращих серферів на Канарських островах. Серед них
+                        чемпіон
+                        Європи
+                        з лонгборду, який з радістю поділиться досвідом як з новачками, так і більш досвідченими
+                        серферами.
+                        <br>
+                        Усі члени викладацького складу є сертифікованими членами Федерації серфінгу Канарських
+                        островів.
+                        Деякі з них знають російську мову, що безперечно позиціонує нас як російську школу серфінгу
+                        за
+                        кордоном!
+                    </p>
+                    <p>Весь тренерський склад регулярно бере участь у семінарах та курсах підвищення кваліфікації,
+                        які
+                        проводяться по всьому світу різними відомими серф-клубами та федераціями. Тому в нашій школі
+                        серфінгу ви можете бути спокійними: вас навчають найкращі тренери!</p>
+                    <p>Методика навчання серфінгу розрахована як на новачків, серферів середнього рівня, так і
+                        серферів
+                        рівня ТОП. Тренери знаходять підхід до кожного, незважаючи на те, що навчання серфінгу у
+                        нашій
+                        школі
+                        проводиться у групах. Однак, ми пропонуємо персональні уроки серфінгу - тільки ви та тренер!
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 'Галерея' -->
+        <section class="gallery">
+            <div class="container">
+                <h2>Галерея
+                    <img src="img/element.png" alt="" class="element">
+                </h2>
+                <div id="btnContainer">
+                    <button class="btn " data-filter="all" onclick="filterSelection('all')">Все</button>
+                    <button class="btn " data-filter="tourist" onclick="filterSelection('tourist')">Туристи</button>
+                    <button class="btn" data-filter="nature" onclick="filterSelection('nature')"> Природа</button>
+                    <button class="btn active" data-filter="profi" onclick="filterSelection('profi')"> Профі</button>
+                </div>
+                <div class="photo-gallery">
+                    <div class="filter tourist">
+                        <img src="./img/tourist-1.jpeg" alt="tourist">
+                    </div>
+                    <div class="filter tourist">
+                        <img src="./img/tourist-2.jpeg" alt="tourist">
+                    </div>
+                    <div class="filter tourist">
+                        <img src="./img/tourist-3.jpeg" alt="tourist">
+                    </div>
+                    <div class="filter tourist">
+                        <img src="./img/tourist-4.jpeg" alt="tourist">
+                    </div>
+                    <div class="filter tourist">
+                        <img src="./img/nature-5.jpeg" alt="tourist">
+                    </div>
+                    <div class="filter tourist">
+                        <img src="./img/tourist-6.jpeg" alt="tourist">
+                    </div>
+                    <div class="filter nature">
+                        <img src="./img/nature-1.jpeg" alt="nature">
+                    </div>
+                    <div class="filter nature">
+                        <img src="./img/nature-2.jpeg" alt="nature">
+                    </div>
+                    <div class="filter nature">
+                        <img src="./img/nature-3.jpeg" alt="nature">
+                    </div>
+                    <div class="filter nature">
+                        <img src="./img/nature-4.jpeg" alt="nature">
+                    </div>
+
+                    <div class="filter nature">
+                        <img src="./img/tourist-5.jpeg" alt="nature">
+                    </div>
+                    <div class="filter nature">
+                        <img src="./img/nature-6.jpeg" alt="nature">
+                    </div>
+
+                    <div class="filter profi">
+                        <img src="./img/profi-1.jpeg" alt="profi">
+                    </div>
+                    <div class="filter profi">
+                        <img src="./img/profi-2.jpeg" alt="profi">
+                    </div>
+                    <div class="filter profi">
+                        <img src="./img/profi-3.jpeg" alt="profi">
+                    </div>
+                    <div class="filter profi">
+                        <img src="./img/profi-4.jpeg" alt="profi">
+                    </div>
+                    <div class="filter profi">
+                        <img src="./img/profi-5.jpeg" alt="profi">
+                    </div>
+                    <div class="filter profi">
+                        <img src="./img/profi-6.jpeg" alt="profi">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 'Цитата' -->
+        <section class="quote">
+            <div class="container">
+                <q>"Якщо сумніваєшся - йди катайся."</q>
+                <span>Нет Янг, перший Чемпіон Світу з серфінгу</span>
+            </div>
+        </section>
+
+        <!-- Section 'Видео' -->
+        <section class="video">
+            <div class="container">
+                <!-- <video width="1200" height="600" controls src="https://www.youtube.com/watch?v=zZqxPozl2Ec">
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                </video> -->
+                <iframe id="ytplayer" type="text/html" width="1200" height="675"
+                    src="https://www.youtube.com/embed/-11kNs_fWlg?si=DtsXHzYZQPe9svxV?modestbranding=1" frameborder="0"
+                    allowfullscreen></iframe>
+                <div class="numbers">
+                    <p>450 <span>туристів</span>
+                    </p>
+                    <p>2500 <span>годин катання</span>
+                    </p>
+                    <p>10 <span>проф. тренерів</span>
+                    </p>
+                    <p>365 <span>днів на рік</span>
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Section 'Blog' -->
+        <section class="blog" id="blog">
+
+            <h2>Блог
+                <img src="img/element.png" alt="" class="element">
+            </h2>
+            <!-- <img src="./img/blog-img.jpeg" alt=""> -->
+
+            <div class="wrapper">
+                <!-- Главный контейнер слайдера -->
+                <div class="swiper-container image-slider">
+                    <!-- Обязательная оболочка -->
+                    <div class="swiper-wrapper image-slider_wrapper">
+                        <!-- Слайды -->
+                        <div class="swiper-slide image-slider_slide">
+                            <div class="swiper-slide-bg"></div>
+                            <div class="swiper-slide-inner container">
+                                <div class="swiper-slide-contents ">
+                                    <div class="slide-heading ">
+                                        <h3>ЩО НЕОБХІДНО ВЗЯТИ З СОБОЮ НА СЕРФ ТУР</h3>
+                                    </div>
+                                    <div class="slide-description">ТОП 20 необхідних речей для комфортного відпочинку та
+                                        навчання</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="swiper-slide image-slider_slide">
+                            <div class="swiper-slide-bg"></div>
+                            <div class="swiper-slide-inner container">
+                                <div class="swiper-slide-contents ">
+                                    <div class="slide-heading ">
+                                        <h3>ЩО НЕОБХІДНО ВЗЯТИ З СОБОЮ НА СЕРФ ТУР</h3>
+                                    </div>
+                                    <div class="slide-description">ТОП 20 необхідних речей для комфортного відпочинку та
+                                        навчання</div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- Добавляем, если нам нужна пагинация -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 'Наша команда' -->
+        <section class="our-team" id="our-team">
+            <div class="container">
+                <h2>Наша команда
+                    <img src="img/element.png" alt="" class="element">
+                </h2>
+                <div class="our-team-photos">
+                    <div class="our-team-photo">
+                        <img src="./img/our-team/Mike.jpeg" alt="Mike">
+                        <span class="name">Mike</span>
+                        <span>Головний інструктор</span>
+                    </div>
+
+                    <div class="our-team-photo">
+                        <img src="./img/our-team/Mary.jpeg" alt="Mary">
+                        <span class="name">Mary</span>
+                        <span>інструктор</span>
+                    </div>
+
+                    <div class="our-team-photo">
+                        <img src="./img/our-team/Olga.jpeg" alt="Ольга">
+                        <span class="name">Ольга</span>
+                        <span>інструктор</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 'Пакети послуг' -->
+        <section class="packet-services" id="packet-services">
+            <div class="container">
+                <h2>Пакети послуг
+                    <img src="img/element.png" alt="" class="element">
+                </h2>
+                <div class="packets">
+                    <div class="packet">
+                        <div class="packet-description">
+                            <h3>Стандарт</h3>
+                            <ol>
+                                <li>Проживання на віллі 6 ночей</li>
+                                <li>Номер категорії стандарт</li>
+                                <li>Екіпірування для навчання</li>
+                                <li>Навчання серфінгу 5 тренувань по 2 години</li>
+                                <li>Страховка</li>
+                                <li>Вечірка з частуваннями та дискотекою</li>
+                            </ol>
+                        </div>
+
+                        <p>
+                            <span class="price">450</span>
+                            <span>$</span>
+                        </p>
+                    </div>
+
+                    <div class="packet">
+                        <div class="packet-description">
+                            <h3>Все включено</h3>
+                            <ol>
+                                <li>Проживання на віллі 6 ночей</li>
+                                <li>Номер категорії люкс</li>
+                                <li>Екіпірування для навчання</li>
+                                <li>Навчання серфінгу 8 тренувань по 2 години</li>
+                                <li>Страховка</li>
+                                <li>Вечірка з частуваннями та дискотекою</li>
+                                <li>Авіа переліт Тенеріфе -Лансароте - Тенеріфе</li>
+                                <li>Сніданки на віллі</li>
+                            </ol>
+                        </div>
+
+                        <p>
+                            <span class="price">950</span>
+                            <span>$</span>
+                        </p>
+                    </div>
+
+                    <div class="packet">
+                        <div class="packet-description">
+                            <h3>Профі</h3>
+                            <ol>
+                                <li>Проживання на віллі 8 ночей</li>
+                                <li>Номер категорії люкс</li>
+                                <li>Екіпірування для навчання</li>
+                                <li>Навчання серфінгу 16 тренувань по 2 години</li>
+                                <li>Страховка</li>
+                                <li>Вечірка з частуваннями та дискотекою</li>
+                                <li>Авіа переліт Тенеріфе -Лансароте - Тенеріфе</li>
+                                <li>Сніданки та вечері на віллі</li>
+                            </ol>
+                        </div>
+
+                        <p>
+                            <span class="price">1450</span>
+                            <span>$</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 'map' -->
+        <section class="map">
+            <div class="map-img">
+                <svg width="57" height="70" viewBox="0 0 57 70" fill="#00b2a0" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M28.3962 70C28.3962 70 56.7925 44.079 56.7925 28.3962C56.7925 12.7134 44.079 0 28.3962 0C12.7134 0 0 12.7134 0 28.3962C0 44.079 28.3962 70 28.3962 70Z"
+                        fill="#00B2A0" />
+                </svg>
+            </div>
+
+
+        </section>
+
+        <!-- Section 'Залишити заявку' -->
+        <section class="submit-application" id="contacts">
+            <div class="container">
+                <h2>Залишити заявку
+                    <img src="img/element.png" alt="" class="element">
+                </h2>
+
+                <div class="submit-application-block">
+                    <form name="contact-form">
+                        <input type="text" placeholder="Ім'я">
+                        <input type="tel" placeholder="Телефон">
+                        <textarea rows="4" cols="50"
+                            placeholder="Залишіть повідомлення, і ми зв'яжемося з Вами найближчим часом"></textarea>
+                        <input type="submit" value="Відправити" class="submit">
+                    </form>
+                    <div class="question">
+                        <p>Є питання? <br>
+                            Ви можете зв'язатися з нами:</p>
+                        <p>WhatsApp, Viber, Telegram<br>
+                            <a href="tel:+3 8067 486-37-88">+3 8067 486-37-88</a>
+                        </p>
+                        <p>Avenida grandes playas 79,<br>
+                            Corralejo la Oliva Fuerteventura,<br>
+                            Spain. 35660</p>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">FACEBOOK</a>
+                    <a href="#">YOUTUBE</a>
+                </div>
             </div>
         </section>
 
     </main>
+
+    <footer>
+        <a href="/" class="logo">
+            <img src="img/logo.png" alt="logo">
+        </a>
+    </footer>
+    <script src="./swiper/swiper.min.js"></script>
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <script src="./scripts/mySwiper.js"></script>
+    <script src="./scripts/script.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,47 @@
+.section-header {
+  background-image: url("/img/img-header.jpeg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding-top: 35px;
+
+    .logo {
+      margin-right: 185px;
+    }
+
+    a {
+      color: #fff;
+      font-size: 24px;
+      letter-spacing: 0.6px;
+      text-decoration: none;
+      margin-right: 30px;
+    }
+  }
+
+  h1 {
+    color: #0d302c;
+    font-family: "Raleway", sans-serif;
+    font-size: 200px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    margin-top: 245px;
+    margin-bottom: -20px;
+  }
+  .description-header {
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    padding-bottom: 315px;
+  }
+
+  .group {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 90px;
+  }
+}
