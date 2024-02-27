@@ -43,7 +43,7 @@ h3,
   .text-about {
     display: flex;
     flex-wrap: wrap;
-    max-height: 450px;
+    // max-height: 450px;
 
     p {
       width: 480px;
@@ -66,6 +66,8 @@ h3,
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    gap: 65px;
+    flex-wrap: wrap;
   }
 
   .advantage {
@@ -92,6 +94,9 @@ h3,
   .statistic {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 
     .wave {
       margin-bottom: 10px;
@@ -115,32 +120,64 @@ h3,
 // Section 'Покоряй вершини'
 
 .our_teachers {
-  margin: 200px 0 148px;
+  // margin: 200px 0 148px;
 
   h2 {
     margin: 0 0 100px;
+    // text-align: center;
+    letter-spacing: 0.2px;
   }
 
-  p {
-    max-width: 507px;
+  .our-teachers-block {
+    overflow: hidden;
   }
 
   .our_teachers-text-block {
-    display: inline-block;
-    position: relative;
+    flex: 0 0 100%;
+    display: flex;
+
+    .section-container {
+      max-width: 1225px;
+      margin: 0px auto;
+      padding: 0px 15px;
+      display: flex;
+      align-items: center;
+
+      .section-body {
+        width: 50%;
+        padding-right: 41px;
+        padding-top: 200px;
+        padding-bottom: 147px;
+      }
+
+      // p {
+      //   max-width: 507px;
+      // }
+    }
   }
 
-  .our_teachers-text-block::after {
-    content: url(../img/background-wave.jpeg);
-    position: absolute;
-    right: -985px;
-    top: -201px;
+  .our_teachers-img-block {
+    img {
+      max-width: 100%;
+    }
   }
+
+  // .our_teachers-text-block {
+  //   display: inline-block;
+  //   position: relative;
+  // }
+
+  // .our_teachers-text-block::after {
+  //   content: url(../img/background-wave.jpeg);
+  //   position: absolute;
+  //   right: -985px;
+  //   top: -201px;
+  // }
 }
 
 // Section 'Галерея'
 .gallery {
-  margin: 340px 0 200px;
+  margin: 200px 0 200px;
 
   h2 {
     margin-bottom: 212px;
@@ -223,7 +260,10 @@ h3,
 .video {
   padding: 200px 0 100px;
   iframe {
-    margin-bottom: 200px;
+    // margin-bottom: 200px;
+    border: none;
+    width: 100%;
+    margin: 0 0 200px;
   }
 
   .numbers {
@@ -253,7 +293,7 @@ h3,
   padding: 100px 0;
   h2 {
     text-align: center;
-    margin-bottom: 230px;
+    margin: 0 0 230px;
   }
 }
 
@@ -269,6 +309,8 @@ h3,
   .our-team-photos {
     display: flex;
     justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
 
     .our-team-photo {
       display: flex;
@@ -351,22 +393,21 @@ h3,
 
 .map {
   padding: 200px 0 100px;
+  overflow: hidden;
+
+  .map-container {
+    max-width: 1473px;
+    margin: 0px auto;
+  }
 
   .map-img {
     background-image: url("../img/map.png");
-    position: relative;
-    width: 1473px;
+    max-width: 1473px;
     height: 640px;
-    // overflow: hidden;
-    background-size: 1473px 640px;
     right: 0;
     margin: 0 auto;
-
-    svg {
-      position: absolute;
-      top: 100px;
-      left: 705px;
-    }
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
@@ -384,6 +425,7 @@ h3,
     display: flex;
     justify-content: space-between;
     margin-bottom: 200px;
+    gap: 30px;
 
     form {
       max-width: 569px;
@@ -461,6 +503,7 @@ h3,
 
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 
     a {
       font-family: $main-font;
@@ -475,5 +518,308 @@ h3,
     a:nth-child(even) {
       color: #00b2a0;
     }
+  }
+}
+
+@media (min-width: 767px) {
+  .our-teachers-block {
+    display: flex;
+
+    .our_teachers-img-block {
+      flex: 0 0 50%;
+      transform: translate(-100%, 0);
+      position: relative;
+      // padding: 0 0 69.4% 0;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    h2 {
+      text-align: center;
+    }
+    .text-about p {
+      width: 375px;
+    }
+  }
+
+  .services {
+    padding: 150px 0;
+  }
+
+  .our_teachers .our_teachers-text-block .section-container .section-body {
+    padding-top: 150px;
+  }
+
+  .gallery {
+    margin: 150px 0 150px;
+    h2 {
+      margin-bottom: 150px;
+    }
+  }
+
+  .video {
+    padding-top: 150px;
+    padding-bottom: 75px;
+    iframe {
+      margin: 0 0 150px;
+    }
+  }
+
+  .blog {
+    padding: 75px 0;
+
+    h2 {
+      margin: 0 0 150px;
+    }
+  }
+
+  .our-team {
+    padding: 75px 0 150px;
+
+    h2 {
+      margin-bottom: 150px;
+    }
+  }
+
+  .packet-services {
+    padding: 150px 0;
+
+    h2 {
+      margin-bottom: 150px;
+    }
+  }
+
+  .map {
+    padding: 150px 0 75px;
+
+    .map-img {
+      height: 446px;
+    }
+  }
+  .submit-application {
+    padding: 75px 0 100px;
+
+    h2 {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about .text-about p {
+    width: 100%;
+  }
+  .our-team .our-team-photos {
+    justify-content: space-around;
+  }
+
+  .packet-services .packets {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .submit-application .submit-application-block {
+    justify-content: center;
+    gap: 75px;
+    flex-wrap: wrap;
+  }
+
+  .services {
+    .advantages {
+      gap: 40px;
+      justify-content: center;
+      .advantage {
+        max-width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+    }
+
+    .statistic {
+      margin-top: 30px;
+    }
+  }
+
+  .video iframe {
+    height: 345px;
+  }
+
+  .wrapper .image-slider .swiper-slide {
+    height: 475px;
+  }
+
+  .map .map-img {
+    max-height: 340px;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 34px;
+  }
+
+  .about {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .services {
+    padding: 75px 0;
+  }
+
+  .our_teachers .our_teachers-text-block .section-container .section-body {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    width: 100%;
+  }
+
+  .gallery {
+    margin: 75px 0 75px;
+    h2 {
+      margin-bottom: 75px;
+    }
+
+    .photo-gallery {
+      grid-gap: 15px;
+      grid-template-rows: repeat(auto-fit, minmax(135px, 1fr));
+    }
+  }
+
+  .video {
+    padding-top: 75px;
+    padding-bottom: 40px;
+    iframe {
+      margin: 0 0 75px;
+    }
+  }
+
+  .blog {
+    padding: 40px 0;
+
+    h2 {
+      margin: 0 0 75px;
+    }
+  }
+
+  .our-team {
+    padding: 40px 0 75px;
+
+    h2 {
+      margin-bottom: 75px;
+    }
+  }
+
+  .packet-services {
+    padding: 75px 0;
+
+    h2 {
+      margin-bottom: 75px;
+    }
+  }
+
+  .map {
+    padding: 75px 0 40px;
+  }
+  .submit-application {
+    padding: 40px 0 50px;
+
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+
+  .wrapper
+    .image-slider
+    .swiper-slide
+    .swiper-slide-inner
+    .swiper-slide-contents
+    h3 {
+    font-size: 31px;
+  }
+}
+
+@media (max-width: 600px) {
+  .submit-application .submit-application-block form {
+    max-width: 390px;
+    textarea {
+      max-width: 390px;
+      height: 156px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .element {
+    display: none;
+  }
+  .about h2 {
+    margin: 0 0 50px;
+  }
+
+  .btn {
+    font-size: 22px;
+  }
+  .quote span {
+    margin: 5px 30px;
+  }
+
+  .video .numbers p {
+    font-size: 34px;
+  }
+
+  .submit-application .submit-application-block {
+    form {
+      max-width: 300px;
+      .submit {
+        padding: 23px 30px;
+
+        width: 300px;
+      }
+      textarea {
+        max-width: 300px;
+      }
+    }
+  }
+  .submit-application .social-media {
+    gap: 40px;
+  }
+
+  .our-team .our-team-photos .our-team-photo {
+    img {
+      width: 100%;
+    }
+  }
+
+  .about .text-about p {
+    width: 480px;
+    margin: 15px 0 15px 0;
+  }
+  .video iframe {
+    height: 157px;
+  }
+  .video .numbers {
+    flex-direction: column;
+  }
+
+  .map .map-img {
+    max-height: 143px;
   }
 }

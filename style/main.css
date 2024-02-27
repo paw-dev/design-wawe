@@ -8,7 +8,6 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   padding: 0px;
   margin: 0px;
-  overflow-x: hidden;
 }
 body .container {
   max-width: 1225px;
@@ -67,6 +66,50 @@ body p {
   padding-bottom: 90px;
 }
 
+@media (max-width: 600px) {
+  .section-header h1 {
+    color: #0d302c;
+    font-family: "Raleway", sans-serif;
+    font-size: 108px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    margin-top: 245px;
+    margin-bottom: -20px;
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .section-header nav {
+    align-items: center;
+    padding-top: 35px;
+    justify-content: space-between;
+  }
+  .menu {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 600px) and (max-width: 480px) {
+  .section-header h1 {
+    margin-top: 100px;
+  }
+  .section-header .description-header {
+    padding-bottom: 114px;
+  }
+}
+@media (max-width: 320px) {
+  .section-header h1 {
+    font-size: 80px;
+  }
+  .section-header nav .logo {
+    margin-right: 20px;
+  }
+}
 footer {
   background-color: #00b2a0;
   padding: 69px 0;
@@ -182,7 +225,6 @@ h3,
 .about .text-about {
   display: flex;
   flex-wrap: wrap;
-  max-height: 450px;
 }
 .about .text-about p {
   width: 480px;
@@ -201,6 +243,8 @@ h3,
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  gap: 65px;
+  flex-wrap: wrap;
 }
 .services .advantage {
   max-width: 350px;
@@ -223,6 +267,9 @@ h3,
 .services .statistic {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .services .statistic .wave {
   margin-bottom: 10px;
@@ -238,28 +285,36 @@ h3,
   max-width: 610px;
 }
 
-.our_teachers {
-  margin: 200px 0 148px;
-}
 .our_teachers h2 {
   margin: 0 0 100px;
+  letter-spacing: 0.2px;
 }
-.our_teachers p {
-  max-width: 507px;
+.our_teachers .our-teachers-block {
+  overflow: hidden;
 }
 .our_teachers .our_teachers-text-block {
-  display: inline-block;
-  position: relative;
+  flex: 0 0 100%;
+  display: flex;
 }
-.our_teachers .our_teachers-text-block::after {
-  content: url(../img/background-wave.jpeg);
-  position: absolute;
-  right: -985px;
-  top: -201px;
+.our_teachers .our_teachers-text-block .section-container {
+  max-width: 1225px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+}
+.our_teachers .our_teachers-text-block .section-container .section-body {
+  width: 50%;
+  padding-right: 41px;
+  padding-top: 200px;
+  padding-bottom: 147px;
+}
+.our_teachers .our_teachers-img-block img {
+  max-width: 100%;
 }
 
 .gallery {
-  margin: 340px 0 200px;
+  margin: 200px 0 200px;
 }
 .gallery h2 {
   margin-bottom: 212px;
@@ -331,7 +386,9 @@ h3,
   padding: 200px 0 100px;
 }
 .video iframe {
-  margin-bottom: 200px;
+  border: none;
+  width: 100%;
+  margin: 0 0 200px;
 }
 .video .numbers {
   display: flex;
@@ -358,7 +415,7 @@ h3,
 }
 .blog h2 {
   text-align: center;
-  margin-bottom: 230px;
+  margin: 0 0 230px;
 }
 
 .our-team {
@@ -371,6 +428,8 @@ h3,
 .our-team .our-team-photos {
   display: flex;
   justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 .our-team .our-team-photos .our-team-photo {
   display: flex;
@@ -439,20 +498,20 @@ h3,
 
 .map {
   padding: 200px 0 100px;
+  overflow: hidden;
+}
+.map .map-container {
+  max-width: 1473px;
+  margin: 0px auto;
 }
 .map .map-img {
   background-image: url("../img/map.png");
-  position: relative;
-  width: 1473px;
+  max-width: 1473px;
   height: 640px;
-  background-size: 1473px 640px;
   right: 0;
   margin: 0 auto;
-}
-.map .map-img svg {
-  position: absolute;
-  top: 100px;
-  left: 705px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .submit-application {
@@ -466,6 +525,7 @@ h3,
   display: flex;
   justify-content: space-between;
   margin-bottom: 200px;
+  gap: 30px;
 }
 .submit-application .submit-application-block form {
   max-width: 569px;
@@ -540,6 +600,7 @@ h3,
   margin: 0 auto;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .submit-application .social-media a {
   font-family: "Roboto Condensed", sans-serif;
@@ -552,4 +613,247 @@ h3,
 }
 .submit-application .social-media a:nth-child(even) {
   color: #00b2a0;
+}
+
+@media (min-width: 767px) {
+  .our-teachers-block {
+    display: flex;
+  }
+  .our-teachers-block .our_teachers-img-block {
+    flex: 0 0 50%;
+    transform: translate(-100%, 0);
+    position: relative;
+  }
+  .our-teachers-block .our_teachers-img-block img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (max-width: 1024px) {
+  .about {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .about h2 {
+    text-align: center;
+  }
+  .about .text-about p {
+    width: 375px;
+  }
+  .services {
+    padding: 150px 0;
+  }
+  .our_teachers .our_teachers-text-block .section-container .section-body {
+    padding-top: 150px;
+  }
+  .gallery {
+    margin: 150px 0 150px;
+  }
+  .gallery h2 {
+    margin-bottom: 150px;
+  }
+  .video {
+    padding-top: 150px;
+    padding-bottom: 75px;
+  }
+  .video iframe {
+    margin: 0 0 150px;
+  }
+  .blog {
+    padding: 75px 0;
+  }
+  .blog h2 {
+    margin: 0 0 150px;
+  }
+  .our-team {
+    padding: 75px 0 150px;
+  }
+  .our-team h2 {
+    margin-bottom: 150px;
+  }
+  .packet-services {
+    padding: 150px 0;
+  }
+  .packet-services h2 {
+    margin-bottom: 150px;
+  }
+  .map {
+    padding: 150px 0 75px;
+  }
+  .map .map-img {
+    height: 446px;
+  }
+  .submit-application {
+    padding: 75px 0 100px;
+  }
+  .submit-application h2 {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .about .text-about p {
+    width: 100%;
+  }
+  .our-team .our-team-photos {
+    justify-content: space-around;
+  }
+  .packet-services .packets {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .submit-application .submit-application-block {
+    justify-content: center;
+    gap: 75px;
+    flex-wrap: wrap;
+  }
+  .services .advantages {
+    gap: 40px;
+    justify-content: center;
+  }
+  .services .advantages .advantage {
+    max-width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .services .statistic {
+    margin-top: 30px;
+  }
+  .video iframe {
+    height: 345px;
+  }
+  .wrapper .image-slider .swiper-slide {
+    height: 475px;
+  }
+  .map .map-img {
+    max-height: 340px;
+  }
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 34px;
+  }
+  .about {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .about h2 {
+    text-align: center;
+  }
+  .services {
+    padding: 75px 0;
+  }
+  .our_teachers .our_teachers-text-block .section-container .section-body {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    width: 100%;
+  }
+  .gallery {
+    margin: 75px 0 75px;
+  }
+  .gallery h2 {
+    margin-bottom: 75px;
+  }
+  .gallery .photo-gallery {
+    grid-gap: 15px;
+    grid-template-rows: repeat(auto-fit, minmax(135px, 1fr));
+  }
+  .video {
+    padding-top: 75px;
+    padding-bottom: 40px;
+  }
+  .video iframe {
+    margin: 0 0 75px;
+  }
+  .blog {
+    padding: 40px 0;
+  }
+  .blog h2 {
+    margin: 0 0 75px;
+  }
+  .our-team {
+    padding: 40px 0 75px;
+  }
+  .our-team h2 {
+    margin-bottom: 75px;
+  }
+  .packet-services {
+    padding: 75px 0;
+  }
+  .packet-services h2 {
+    margin-bottom: 75px;
+  }
+  .map {
+    padding: 75px 0 40px;
+  }
+  .submit-application {
+    padding: 40px 0 50px;
+  }
+  .submit-application h2 {
+    margin-bottom: 50px;
+  }
+  .wrapper .image-slider .swiper-slide .swiper-slide-inner .swiper-slide-contents h3 {
+    font-size: 31px;
+  }
+}
+@media (max-width: 600px) {
+  .submit-application .submit-application-block form {
+    max-width: 390px;
+  }
+  .submit-application .submit-application-block form textarea {
+    max-width: 390px;
+    height: 156px;
+  }
+}
+@media (max-width: 320px) {
+  .element {
+    display: none;
+  }
+  .about h2 {
+    margin: 0 0 50px;
+  }
+  .btn {
+    font-size: 22px;
+  }
+  .quote span {
+    margin: 5px 30px;
+  }
+  .video .numbers p {
+    font-size: 34px;
+  }
+  .submit-application .submit-application-block form {
+    max-width: 300px;
+  }
+  .submit-application .submit-application-block form .submit {
+    padding: 23px 30px;
+    width: 300px;
+  }
+  .submit-application .submit-application-block form textarea {
+    max-width: 300px;
+  }
+  .submit-application .social-media {
+    gap: 40px;
+  }
+  .our-team .our-team-photos .our-team-photo img {
+    width: 100%;
+  }
+  .about .text-about p {
+    width: 480px;
+    margin: 15px 0 15px 0;
+  }
+  .video iframe {
+    height: 157px;
+  }
+  .video .numbers {
+    flex-direction: column;
+  }
+  .map .map-img {
+    max-height: 143px;
+  }
 }/*# sourceMappingURL=main.css.map */
